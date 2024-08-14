@@ -1,0 +1,50 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+  
+li {
+    border: 1px solid #ddd; /* Box border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Add space inside the box */
+    margin-bottom: 10px; /* Space between boxes */
+    background-color: #f9f9f9; /* Background color */
+}
+  
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Link color */
+    font-weight: bold; /* Make links bold */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.author-info {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items */
+    gap: 10px; /* Space between image and author name */
+}
+  
+.profile-pic {
+    width: 40px; /* Set the width of the profile picture */
+    height: 40px; /* Set the height of the profile picture */
+    border-radius: 50%; /* Make the profile picture circular */
+    background-color: #ddd; /* Placeholder background color */
+}

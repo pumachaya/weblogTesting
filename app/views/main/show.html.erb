@@ -1,0 +1,32 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+
+<h2>Comments</h2>
+
+<% if @post.comments.any? %>
+  <ul>
+    <% @post.comments.each do |comment| %>
+      <li>
+        <p><strong><%= comment.commenter %>:</strong> <%= comment.body %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No comments yet.</p>
+<% end %>
+
+<h3>Add a new comment:</h3>
+<%= form_with(model: [@post, @post.comments.build], url: main_comments_path(@post), local: true) do |form| %>
+  <div>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </div>
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </div>
+  <div>
+    <%= form.submit "Add Comment" %>
+  </div>
+  <p>Please refresh this page to see your comment after pressing Add Comment.</p>
+<% end %>

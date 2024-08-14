@@ -1,0 +1,19 @@
+<h1>Weblog</h1>
+<p>What's on your mind?</p>
+
+<h3>Posts</h3>
+
+<ul>
+  <% @posts.each do |p| %>
+    <li>
+      <div class="author-info">
+          <%= image_tag "blank-profile-picture.png", alt: "Profile Picture", class: "profile-pic" %>
+          <p><%= p.author %></p>
+      </div>
+      <a href="/main/<%= p.id %>">
+          <p><%= p.title %></p>
+      </a>
+      <p><%= p.body %></p>
+    </li>
+  <% end %>
+</ul>
