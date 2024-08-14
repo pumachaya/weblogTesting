@@ -33,3 +33,64 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Logs
+log/*.log
+log/*.log.*
+
+# Temporary files
+tmp/
+tmp/**/
+
+# Cache
+cache/
+public/assets
+public/packs
+public/packs-test
+public/webpack
+
+# PID files
+tmp/pids/
+tmp/pids/*.pid
+
+# SQLite database
+*.sqlite3
+*.sqlite3-journal
+
+# Environment variables
+.env
+.env.*.local
+
+# Byebug command history file
+.byebug_history
+
+# Node modules
+node_modules/
+
+# Yarn
+.yarn-integrity
+
+# Coverage reports
+coverage/
+
+# Rails specific
+*.rbc
+*.sass-cache
+*.rvmrc
+.project
+
+# IDE/editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Ruby-specific
+*.gem
+*.rbc
+.ruby-version
+.ruby-gemset
